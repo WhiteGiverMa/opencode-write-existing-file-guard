@@ -1,0 +1,69 @@
+{
+  "$schema": "https://json.schemastore.org/package.json",
+  "name": "opencode-write-existing-file-guard",
+  "version": "0.1.0",
+  "description": "OpenCode plugin that blocks native write overwrites of existing files until the same session has successfully read them.",
+  "license": "MIT",
+  "author": "WhiteGiverMa",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./server": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./v2": {
+      "types": "./dist/v2-entry.d.ts",
+      "default": "./dist/v2-entry.js"
+    }
+  },
+  "files": [
+    "dist",
+    "v2-entry",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "opencode",
+    "opencode-plugin",
+    "write-guard",
+    "read-before-write",
+    "safety"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WhiteGiverMa/opencode-write-existing-file-guard.git"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "bun test",
+    "build": "bun run build:js && bun run build:types",
+    "build:js": "bun build ./src/index.ts ./src/v2-entry.ts --outdir ./dist --target node --format esm",
+    "build:types": "tsc -p tsconfig.build.json",
+    "check": "bun run typecheck && bun test && bun run build"
+  },
+  "devDependencies": {
+    "@opencode-ai/plugin": "1.18.34",
+    "@opencode/plugin": "2.0.21",
+    "@types/bun": "1.4.2",
+    "typescript": "5.9.3"
+  },
+  "peerDependencies": {
+    "@opencode-ai/plugin": ">=1.18.34",
+    "@opencode/plugin": ">=2.0.21"
+  },
+  "peerDependenciesMeta": {
+    "@opencode-ai/plugin": {
+      "optional": true
+    },
+    "@opencode/plugin": {
+      "optional": true
+    }
+  }
+}
