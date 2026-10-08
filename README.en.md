@@ -129,7 +129,7 @@ Or, when installed as a package:
 ```
 
 Build first, then keep `v2-entry/` beside `dist/`; the wrapper re-exports
-`dist/v2-entry.js`. The package is not published to npm.
+`dist/v2-entry.js`.
 
 ### Options
 

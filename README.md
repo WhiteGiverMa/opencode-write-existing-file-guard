@@ -98,7 +98,7 @@
 }
 ```
 
-先构建，并让 `v2-entry/` 与 `dist/` 保持相邻；包装入口 re-export `dist/v2-entry.js`。本包未发布到 npm。
+先构建，并让 `v2-entry/` 与 `dist/` 保持相邻；包装入口 re-export `dist/v2-entry.js`。
 
 ### 选项
 
