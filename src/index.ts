@@ -3,7 +3,7 @@ import type { Context as PluginContextV2, Cleanup } from "@opencode/plugin/promi
 import { createV1Hooks } from "./v1"
 import { registerV2Guard } from "./v2"
 
-export const id = "opencode-write-existing-file-guard"
+export const id = "o3p.tool.write-existing-file-guard"
 
 /**
  * v1 entry. OpenCode 1.x loads the default export and calls `server()`.

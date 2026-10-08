@@ -5,7 +5,7 @@ describe("plugin module shape", () => {
   describe("#given the dual-version entry", () => {
     it("#when inspected #then v1 server and v2 setup exports are present", () => {
       // given / when / then
-      expect(id).toBe("opencode-write-existing-file-guard")
+      expect(id).toBe("o3p.tool.write-existing-file-guard")
       expect(server).toBeFunction()
       expect(setup).toBeFunction()
     })
